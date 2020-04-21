@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.shlomitubul.secretsManager.controllers.RegisterController">
+    <center>
+        <VBox alignment="CENTER_LEFT" spacing="15.0" BorderPane.alignment="CENTER">
+            <!--user registration-->
+            <children>
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="136.0" spacing="10.0">
+                    <children>
+                        <Label fx:id="lbl_title" alignment="CENTER" contentDisplay="CENTER" text="registration">
+                            <font>
+                                <Font size="22.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" spacing="10.0">
+                    <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="username:">
+                            <font>
+                                <Font size="22.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="txt_username" alignment="CENTER" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="password:">
+                            <font>
+                                <Font size="22.0" />
+                            </font>
+                        </Label>
+                        <PasswordField fx:id="pass_password" alignment="CENTER" />
+                    </children>
+                </HBox>
+
+                <!--keystore configuration-->
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="136.0">
+                    <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="keystore settings:" underline="true">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+                    </children>
+               <VBox.margin>
+                  <Insets top="50.0" />
+               </VBox.margin>
+                </HBox>
+                <HBox alignment="CENTER" spacing="10.0">
+                    <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="keystore name:">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="keystoreName" alignment="CENTER" />
+
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="keystore password:">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+                        <PasswordField fx:id="keystorePassword" alignment="CENTER" />
+                    </children>
+                </HBox>
+
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="225.0" prefHeight="0.0" spacing="150.0">
+                    <children>
+                        <Button fx:id="btn_cancel" layoutX="287.0" layoutY="10.0" mnemonicParsing="false" prefWidth="60.0" text="cancel" />
+                        <Button fx:id="btn_ok" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#register" prefWidth="60.0" text="continue" />
+                    </children>
+                </HBox>
+
+
+            </children>
+        </VBox>
+    </center>
+</BorderPane>

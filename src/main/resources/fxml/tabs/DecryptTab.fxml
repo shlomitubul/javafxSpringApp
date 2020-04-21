@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<?import javafx.scene.text.Font?>
+<Tab fx:id="decTab" text="Decrypt" xmlns:fx="http://javafx.com/fxml/1"
+     xmlns="http://javafx.com/javafx/8"
+     fx:controller="com.shlomitubul.secretsManager.controllers.DecryptController">
+    <content>
+        <VBox>
+            <padding>
+                <Insets top="10"/>
+            </padding>
+            <HBox alignment="CENTER" spacing="5">
+                <Label text="key alias:">
+                    <padding>
+                        <Insets top="10" right="10" bottom="10" left="10"/>
+                    </padding>
+
+                    <font>
+                        <Font size="15.0" name="System Bold"></Font>
+                    </font>
+
+                </Label>
+                <TextField fx:id="keyAlias">
+                    <padding>
+                        <Insets top="10" right="10" bottom="10" left="10"/>
+                    </padding>
+                </TextField>
+
+                <Label text="secret-key password:" alignment="CENTER_RIGHT">
+                    <padding>
+                        <Insets top="10" right="10" bottom="10" left="10"/>
+                    </padding>
+
+                    <font>
+                        <Font size="15.0" name="System Bold"></Font>
+                    </font>
+                </Label>
+                <PasswordField fx:id="keyPassword" alignment="CENTER_RIGHT">
+                    <padding>
+                        <Insets top="10" right="10" bottom="10" left="10"/>
+                    </padding>
+                </PasswordField>
+                <Button  text="decrypt" onMouseClicked="#onDecryptClick">
+                    <padding>
+                        <Insets top="10" right="10" bottom="10" left="10"/>
+                    </padding>
+                </Button>
+            </HBox>
+
+            <!--decryption section-->
+            <Label text="cipher text:">
+                <padding>
+                    <Insets top="10" right="10" bottom="10" left="10"/>
+                </padding>
+
+                <font>
+                    <Font size="15.0" name="System Bold"></Font>
+                </font>
+            </Label>
+            <TextArea fx:id="cipherText"/>
+
+
+            <Label text="text:" >
+                <padding>
+                    <Insets top="30" right="10" bottom="10" left="10"/>
+                </padding>
+
+                <font>
+                    <Font size="15.0" name="System Bold"></Font>
+                </font>
+            </Label>
+            <TextArea fx:id="plainText"/>
+        </VBox>
+    </content>
+</Tab>
